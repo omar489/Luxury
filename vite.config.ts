@@ -19,4 +19,15 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ['swiper/react', 'swiper/modules', 'swiper/css', 'swiper/css/navigation']
+  },
+  build: {
+    rollupOptions: {
+      external: [],
+    },
+    commonjsOptions: {
+      include: [/swiper/, /node_modules/],
+    },
+  },
 }));
