@@ -52,6 +52,8 @@ import img6 from '../assets/6.png';
 import luxImg from '../assets/LUX.png';
 import luxPlusImg from '../assets/LUX PLUS.png';
 import luxPremiumImg from '../assets/LUX PREMIUM.png';
+import fiveDaysImg from '../assets/5days.png';
+import ReelsVideoSlider from '../components/ReelsVideoSlider';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,22 +67,22 @@ const Index = () => {
   });
   const [totalSeatsLeft, setTotalSeatsLeft] = useState(127);
   const [trips, setTrips] = useState([
-    { id: 1, date: "10 يوليو", type: "أيام الأسبوع", availableSeats: 73 },
-    { id: 2, date: "13 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 72 },
-    { id: 3, date: "17 يوليو", type: "أيام الأسبوع", availableSeats: 71 },
-    { id: 4, date: "20 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 70 },
-    { id: 5, date: "24 يوليو", type: "أيام الأسبوع", availableSeats: 69 },
-    { id: 6, date: "27 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 68 },
-    { id: 7, date: "31 يوليو", type: "أيام الأسبوع", availableSeats: 67 },
-    { id: 8, date: "3 أغسطس", type: "أيام الأسبوع", availableSeats: 66 },
-    { id: 9, date: "6 أغسطس", type: "عطلة نهاية أسبوع", availableSeats: 65 },
-    { id: 10, date: "10 أغسطس", type: "أيام الأسبوع", availableSeats: 64 },
-    { id: 11, date: "13 أغسطس", type: "عطلة نهاية أسبوع", availableSeats: 63 },
-    { id: 12, date: "17 أغسطس", type: "أيام الأسبوع", availableSeats: 62 },
-    { id: 13, date: "20 أغسطس", type: "عطلة نهاية أسبوع", availableSeats: 61 },
-    { id: 14, date: "24 أغسطس", type: "أيام الأسبوع", availableSeats: 60 },
-    { id: 15, date: "27 أغسطس", type: "عطلة نهاية أسبوع", availableSeats: 59 },
-    { id: 16, date: "31 أغسطس", type: "أيام الأسبوع", availableSeats: 58 }
+    { id: 1, date: "10 يوليو", type: "أيام الأسبوع", availableSeats: 0 },
+    { id: 2, date: "13 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 15 },
+    { id: 3, date: "17 يوليو", type: "أيام الأسبوع", availableSeats: 17 },
+    { id: 4, date: "20 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 17 },
+    { id: 5, date: "24 يوليو", type: "أيام الأسبوع", availableSeats: 20 },
+    { id: 6, date: "27 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 22 },
+    { id: 7, date: "31 يوليو", type: "أيام الأسبوع", availableSeats: 25 },
+    { id: 8, date: "3 أغسطس", type: "أيام الأسبوع", availableSeats: 26 },
+    { id: 9, date: "6 أغسطس", type: "عطلة نهاية أسبوع", availableSeats: 28 },
+    { id: 10, date: "10 أغسطس", type: "أيام الأسبوع", availableSeats: 30 },
+    { id: 11, date: "13 أغسطس", type: "عطلة نهاية أسبوع", availableSeats: 30 },
+    { id: 12, date: "17 أغسطس", type: "أيام الأسبوع", availableSeats: 33 },
+    { id: 13, date: "20 أغسطس", type: "عطلة نهاية أسبوع", availableSeats: 22 },
+    { id: 14, date: "24 أغسطس", type: "أيام الأسبوع", availableSeats: 40 },
+    { id: 15, date: "27 أغسطس", type: "عطلة نهاية أسبوع", availableSeats: 44 },
+    { id: 16, date: "31 أغسطس", type: "أيام الأسبوع", availableSeats: 48 }
   ]);
   const [slideIndex, setSlideIndex] = useState(0);
   const sliderImages = [img1, img2, img3, img4, img5, img6];
@@ -318,9 +320,13 @@ const Index = () => {
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
               برنامجك السياحي على أصوله
             </h1>
-            <h2 className="text-xl md:text-2xl mb-6 text-transparent bg-gradient-to-r from-turquoise-600 to-blue-600 bg-clip-text font-bold">
-              خمس أيام وأربع ليالي
-            </h2>
+            <div className="mb-6 flex justify-center">
+              <img 
+                src={fiveDaysImg} 
+                alt="خمس أيام وأربع ليالي" 
+                className="h-36 md:h-48 w-auto object-contain"
+              />
+            </div>
             <p className="text-lg text-gray-700 leading-relaxed mb-8 font-medium">
               كل شي … من بيتك لجلستك عالبحر رتبناه على أصوله
             </p>
@@ -395,7 +401,7 @@ const Index = () => {
                   <img src={luxImg} alt="LUX" className="block mx-auto w-full max-w-xs object-contain" style={{margin: 0, padding: 0}} />
                 </div>
                 <div className="text-center mb-4">
-                  <div className="text-xl font-bold text-red-500 animate-breathe" style={{animation: 'breathe 2.5s ease-in-out infinite'}}>السعر يبدأ من 3,995 ريال للفرد</div>
+                  <div className="text-xl font-bold text-red-500 animate-breathe" style={{animation: 'breathe 2.5s ease-in-out infinite'}}>السعر يبدأ من 3,300 ريال للفرد</div>
                 </div>
                 <div className="space-y-4 mb-6">
                   <div className="text-sm">
@@ -422,7 +428,7 @@ const Index = () => {
                   <img src={luxPlusImg} alt="LUX PLUS" className="block mx-auto w-full max-w-xs object-contain" style={{margin: 0, padding: 0}} />
                 </div>
                 <div className="text-center mb-4">
-                  <div className="text-xl font-bold text-red-500 animate-breathe" style={{animation: 'breathe 2.5s ease-in-out infinite'}}>السعر يبدأ من 4150 ريال للفرد</div>
+                  <div className="text-xl font-bold text-red-500 animate-breathe" style={{animation: 'breathe 2.5s ease-in-out infinite'}}>السعر يبدأ من 3,790 ريال للفرد</div>
                 </div>
                 <div className="space-y-4 mb-6">
                   <div className="text-sm">
@@ -449,7 +455,7 @@ const Index = () => {
                   <img src={luxPremiumImg} alt="LUX PREMIUM" className="block mx-auto w-full max-w-xs object-contain" style={{margin: 0, padding: 0}} />
                 </div>
                 <div className="text-center mb-4">
-                  <div className="text-xl font-bold text-red-500 animate-breathe" style={{animation: 'breathe 2.5s ease-in-out infinite'}}>السعر يبدأ من 5450 ريال للفرد</div>
+                  <div className="text-xl font-bold text-red-500 animate-breathe" style={{animation: 'breathe 2.5s ease-in-out infinite'}}>السعر يبدأ من 5,990 ريال للفرد</div>
                 </div>
                 <div className="space-y-4 mb-6">
                   <div className="text-sm">
@@ -621,8 +627,7 @@ const Index = () => {
           </Accordion>
 
           {/* CTA */}
-          <div className="text-center bg-gradient-to-r from-turquoise-500 to-blue-600 rounded-2xl p-6 text-white mt-8">
-            <h3 className="text-xl font-bold mb-4">فعل عرضك الآن</h3>
+          <div className="text-center bg-gradient-to-r from-turquoise-500 to-blue-600 rounded-2xl p-6 text-white mt-8"> 
             <p className="mb-4">احجز الآن واستمتع بعروض الحجز المبكر</p>
             <Button 
               onClick={openWhatsApp}
@@ -722,6 +727,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Reels Video Slider */}
+      <ReelsVideoSlider />
 
 
       {/* Partners Section */}
