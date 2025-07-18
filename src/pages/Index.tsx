@@ -702,22 +702,7 @@ const Index = () => {
       {/* Reels Video Slider */}
       <ReelsVideoSlider />
 
-
-      {/* Partners Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-lg font-medium text-gray-600 mb-4">Trusted by Top-Performing Partnership Teams</h2>
-          </div>
-          <div id="animated-text-strip">
-            {[...Array(3)].map((_, i) => (
-              <span className="marquee" key={i}>
-                فلاي ناس &nbsp;•&nbsp; Rixos &nbsp;•&nbsp; Gewan &nbsp;•&nbsp; Cleopatra &nbsp;•&nbsp; Marina &nbsp;•&nbsp; Alamein &nbsp;•&nbsp; White Beach &nbsp;•&nbsp; Palace &nbsp;•&nbsp; Cabanas &nbsp;•&nbsp; Premium &nbsp;•&nbsp; Resort &nbsp;•&nbsp; Luxury &nbsp;
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/* Final CTA Section */}
       <section className="py-12 px-4 bg-gradient-to-r from-turquoise-600 to-blue-700 text-white text-center">
@@ -737,15 +722,6 @@ const Index = () => {
             >
               <WhatsAppIcon className="w-6 h-6 ml-3" />
               احجز رحلتك للساحل الشمالي الآن
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-turquoise-700 px-8 py-4 text-lg font-bold rounded-full backdrop-blur-sm"
-            >
-              <Phone className="w-6 h-6 ml-3" />
-              920033603
             </Button>
           </div>
 
