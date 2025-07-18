@@ -68,8 +68,8 @@ const Index = () => {
   const [totalSeatsLeft, setTotalSeatsLeft] = useState(127);
   const [trips, setTrips] = useState([
     { id: 1, date: "10 يوليو", type: "أيام الأسبوع", availableSeats: 0 },
-    { id: 2, date: "13 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 15 },
-    { id: 3, date: "17 يوليو", type: "أيام الأسبوع", availableSeats: 17 },
+    { id: 2, date: "13 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 0 },
+    { id: 3, date: "17 يوليو", type: "أيام الأسبوع", availableSeats: 0 },
     { id: 4, date: "20 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 17 },
     { id: 5, date: "24 يوليو", type: "أيام الأسبوع", availableSeats: 20 },
     { id: 6, date: "27 يوليو", type: "عطلة نهاية أسبوع", availableSeats: 22 },
@@ -324,7 +324,7 @@ const Index = () => {
                 { 
                   icon: <Utensils className="w-6 h-6" />, 
                   title: "🍽️ وجبات يومية",
-                  desc: "فطور وعشاء حسب الفندق الي تختاره"
+                  desc: "فطور وغداء وعشاء حسب الفندق الي تختاره"
                 },
                 { 
                   icon: <Gift className="w-6 h-6" />, 
@@ -378,7 +378,7 @@ const Index = () => {
                   <div className="text-sm">
                     <h4 className="font-bold mb-1">Lablaya Marina</h4>
                     <p className="text-xs text-gray-600 mb-1">📍 في قلب مارينا</p>
-                    <p>إطلالة بحر تسر عينك، خصوصية تريحك، وفطورك يفتح النفس</p>
+                    <p>إطلالة بحر تسر عينك، خصوصية تريحك، وفطار وغداء وعشاء يفتح النفس</p>
                   </div>
                   <div className="text-sm">
                     <h4 className="font-bold mb-1">Safy Cabanas</h4>
@@ -405,12 +405,12 @@ const Index = () => {
                   <div className="text-sm">
                     <h4 className="font-bold mb-1">Gewan White Beach</h4>
                     <p className="font-bold text-gray-700 mb-1">راحة مطلّة على البحر</p>
-                    <p>فلل وغرف على البحر، مع فطار وعشاء على أعلى مستوى</p>
+                    <p>فلل وغرف على البحر، مع فطار وغداء وعشاء على أعلى مستوى</p>
                   </div>
                   <div className="text-sm">
                     <h4 className="font-bold mb-1">Gewan Resort</h4>
                     <p className="text-xs text-gray-600 mb-1">🎉 كل المتعة في مكان واحد</p>
-                    <p>أكوا بارك، شاطئ خاص، مع فطار وعشاء راقي</p>
+                    <p>أكوا بارك، شاطئ خاص، مع فطار وغداء وعشاء راقي</p>
                   </div>
                 </div>
                 <Button onClick={openWhatsApp} className="w-full bg-gold-600 hover:bg-gold-700">
@@ -432,17 +432,17 @@ const Index = () => {
                   <div className="text-sm">
                     <h4 className="font-bold mb-1">Gewan Palace Luxury</h4>
                     <p className="font-bold text-gray-700 mb-1">إقامة واسعة وخصوصية عالية</p>
-                    <p>فخامة واسترخاء وخدمة تليق بذوقك مع فطار يليق فيك</p>
+                    <p>فخامة واسترخاء وخدمة تليق بذوقك مع فطار وغداء وعشاء يليق فيك</p>
                   </div>
                   <div className="text-sm">
                     <h4 className="font-bold mb-1">Rixos Premium Alamein</h4>
                     <p className="text-xs text-gray-600 mb-1">👑 قمة الفخامة على طراز عالمي</p>
-                    <p>أجنحة راقية، وشاطئ خاص مع إفطار يومي</p>
+                    <p>أجنحة راقية، وشاطئ خاص مع فطار وغداء وعشاء يومي</p>
                   </div>
                   <div className="text-sm">
                     <h4 className="font-bold mb-1">Cleopatra Luxury Sidi Heneish</h4>
                     <p className="text-xs text-gray-600 mb-1">🛎️ هدوء وذوق رفيع</p>
-                    <p>تصميم راقي، إطلالات تخطف الأنفاس، وفطار يومي فاخر</p>
+                    <p>تصميم راقي، إطلالات تخطف الأنفاس، وفطار وغداء وعشاء يومي فاخر</p>
                   </div>
                 </div>
                 <Button onClick={openWhatsApp} className="w-full bg-purple-600 hover:bg-purple-700">
