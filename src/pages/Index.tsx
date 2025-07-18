@@ -166,18 +166,9 @@ const Index = () => {
       </Button>
 
       {/* Hero Section with Beach Video Background */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
-        {/* Logo */}
-        <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-30">
-          <img 
-            src={luxuryLogo} 
-            alt="Luxury Holidays" 
-            className="h-10 md:h-14 w-auto opacity-90 drop-shadow-lg"
-          />
-        </div>
-
+      <section className="relative min-h-screen flex flex-col overflow-hidden px-4">
         {/* Background Video */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
           {!videoError ? (
             <video
               autoPlay
@@ -185,65 +176,46 @@ const Index = () => {
               muted
               playsInline
               className="absolute inset-0 w-full h-full object-cover"
-              style={{
-                animation: 'beachWaves 4s ease-in-out infinite'
-              }}
+              style={{ animation: 'beachWaves 4s ease-in-out infinite' }}
               onError={() => setVideoError(true)}
             >
               <source src={coverVideo} type="video/mp4" />
             </video>
           ) : (
-            <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: `url(${beachHero})`
-              }}
+            <div
+              className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${beachHero})` }}
             />
           )}
           {/* Dark overlay for text visibility */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
         </div>
-        
-        <div className={`relative z-20 text-center px-4 max-w-2xl mx-auto transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-          {/* Gift Box with Animation - Smaller Size */}
-          <div className="mb-2 flex justify-center"> {/* was mb-6, now mb-2 */}
-            <div 
-              onClick={handleGiftBoxClick}
-              className={`relative cursor-pointer transform transition-all duration-500 ${giftBoxClicked ? 'scale-105 rotate-12' : 'animate-bounce hover:scale-100'} scale-90`} // scale-90 for smaller size
-            >
-              <div className="bg-gradient-to-br from-red-500 to-red-700 text-white rounded-xl p-2 shadow-2xl border-2 border-yellow-400"> {/* p-2 instead of p-3 */}
-                <Gift className="w-5 h-5 mx-auto mb-1 animate-pulse" /> {/* w-5 h-5 instead of w-6 h-6 */}
-                <div className="text-xs font-bold">اضغط للحصول على خصم!</div>
-                <div className="text-[10px] opacity-90">عرض محدود</div>
-              </div>
-              {showDiscount && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-bounce border-2 border-white shadow-lg">
-                  خصم 100 ريال سعودي! 🎉
-                </div>
-              )}
-            </div>
-          </div>
-
+        {/* Logo */}
+        <div className="w-full flex justify-center mb-6 z-30 pt-6">
+          <img 
+            src={luxuryLogo} 
+            alt="Luxury Holidays" 
+            className="h-20 md:h-28 w-auto opacity-90 drop-shadow-lg"
+          />
+        </div>
+        {/* Hero Content */}
+        <div className={`relative z-20 text-center px-4 max-w-2xl mx-auto transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}> 
           {/* New Hero Content */}
           <div className="mb-8">
             <h3 className="text-lg md:text-xl font-medium text-white/90 mb-4 drop-shadow-lg">
               فرصتك لصيف على أصوله
             </h3>
-            
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-2xl">
               احجز رحلتك الصيفية الآن
               <br />
               <span className="text-turquoise-300">إلى العلمين</span>
             </h1>
-            
             <h2 className="text-xl md:text-2xl mb-8 leading-relaxed font-medium text-white/95 drop-shadow-lg">
               من جدة والرياض مباشرة إلى الساحل الشمالي
             </h2>
-            
             <p className="text-lg md:text-xl mb-8 leading-relaxed text-white/90 drop-shadow-lg font-medium">
               رحلتك معنا أصولها!
             </p>
-
             {/* Features */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="bg-white/20 backdrop-blur-md rounded-full px-6 py-3 border border-white/30">
@@ -257,7 +229,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-          
           {/* Primary CTA with WhatsApp Icon */}
           <Button 
             onClick={openWhatsApp}
@@ -503,9 +474,9 @@ const Index = () => {
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
                 <div className="space-y-2">
-                  <p className="flex items-center text-sm"><CheckCircle className="w-4 h-4 text-green-500 ml-2" />خصم 150 ريال للحجز قبل 10 أيام من السفر</p>
-                  <p className="flex items-center text-sm"><CheckCircle className="w-4 h-4 text-green-500 ml-2" />خصم 100 ريال للحجز قبل السفر ب 7 أيام</p>
-                  <p className="flex items-center text-sm"><CheckCircle className="w-4 h-4 text-green-500 ml-2" />خصم 50 ريال للحجز قبل السفر ب 3 أيام</p>
+                  <p className="flex items-center text-sm"><CheckCircle className="w-4 h-4 text-green-500 ml-2" />خصم 150 ريال للحجز قبل 30 أيام من السفر</p>
+                  <p className="flex items-center text-sm"><CheckCircle className="w-4 h-4 text-green-500 ml-2" />خصم 100 ريال للحجز قبل السفر ب 15 أيام</p>
+                  <p className="flex items-center text-sm"><CheckCircle className="w-4 h-4 text-green-500 ml-2" />خصم 50 ريال للحجز قبل السفر ب 7 أيام</p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -815,9 +786,15 @@ const Index = () => {
                 <span className="font-semibold text-gray-900">❓ كم مدة البرنامج؟ وهل التواريخ محددة؟</span>
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4 text-gray-700 leading-relaxed">
-                <p className="mb-2">مدة البرنامج <strong>5 أيام / 4 ليالي</strong>.</p>
-                <p className="mb-2">والرحلات متوفرة <strong>مرتين أسبوعياً</strong> من يونيو إلى نهاية أغسطس 2025.</p>
-                <p className="text-sm text-gray-600">(من الرياض وجدة إلى مطار العلمين مباشرة)</p>
+                <div className="mb-2">مدة البرنامج:</div>
+                <ul className="list-disc pr-6 mb-2">
+                  <li>5 أيام / 4 ليالي</li>
+                  <li>6 أيام / 5 ليالي <span className="text-sm text-gray-500">(من جدة)</span></li>
+                </ul>
+                <div className="mb-2">
+                  والرحلات متوفرة مرتين أسبوعيًا من يونيو إلى نهاية أغسطس 2025.
+                </div>
+                <div className="text-sm text-gray-500">(من الرياض وجدة إلى مطار العلمين مباشرة)</div>
               </AccordionContent>
             </AccordionItem>
 
