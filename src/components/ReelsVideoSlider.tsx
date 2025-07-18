@@ -15,29 +15,29 @@ interface ReelsVideoSliderProps {
 
 const defaultVideos: Video[] = [
   {
-    id: "8p3Sb_q4flY",
-    title: "رحلة أحمد وعائلته",
-    thumbnail: "https://img.youtube.com/vi/8p3Sb_q4flY/hqdefault.jpg"
+    id: "cTSA48bwubE",
+    title: "العلمين",
+    thumbnail: "https://img.youtube.com/vi/cTSA48bwubE/hqdefault.jpg"
   },
   {
-    id: "vClgn_eJy_8", 
-    title: "شهر العسل في العلمين",
-    thumbnail: "https://img.youtube.com/vi/vClgn_eJy_8/hqdefault.jpg"
+    id: "hE-97QNTJ1o",
+    title: "العلمين",
+    thumbnail: "https://img.youtube.com/vi/hE-97QNTJ1o/hqdefault.jpg"
   },
   {
-    id: "JLkOSpejbaQ",
-    title: "مغامرات الشباب",
-    thumbnail: "https://img.youtube.com/vi/JLkOSpejbaQ/hqdefault.jpg"
+    id: "cNbn1uVTs6A",
+    title: "العلمين",
+    thumbnail: "https://img.youtube.com/vi/cNbn1uVTs6A/hqdefault.jpg"
   },
   {
-    id: "ZbZSe6N_BXs",
-    title: "رحلة العائلة الكبيرة",
-    thumbnail: "https://img.youtube.com/vi/ZbZSe6N_BXs/hqdefault.jpg"
+    id: "kvPkAsiJOvI",
+    title: "العلمين",
+    thumbnail: "https://img.youtube.com/vi/kvPkAsiJOvI/hqdefault.jpg"
   },
   {
-    id: "fJ9rUzIMcZQ",
-    title: "أنشطة الماء والرياضة",
-    thumbnail: "https://img.youtube.com/vi/fJ9rUzIMcZQ/hqdefault.jpg"
+    id: "WuFCau56c58",
+    title: "العلمين",
+    thumbnail: "https://img.youtube.com/vi/WuFCau56c58/hqdefault.jpg"
   }
 ];
 
